@@ -1,0 +1,35 @@
+<div class="container">
+<%= form_with scope: :plan, url: plans_path, local: true do |form| %>
+	<p>
+			<%= form.label :country%><br>
+			<%= form.text_field :country %>
+		</p>
+
+		<p>
+			<%= form.label :city %><br>
+			<%= form.text_field :city %>
+		</p>
+
+
+		<p>
+			<%= form.label :datetime %><br>
+			<%= form.date_field :date? %>
+
+		</p>
+
+
+		<p>
+			<%= form.label :description %><br>
+			<%= form.text_area :description %>
+		</p>
+
+
+
+		<p>
+			<%= form.submit 'Save Itinerary' %>
+		</p>
+
+
+<% end %>
+
+</div>

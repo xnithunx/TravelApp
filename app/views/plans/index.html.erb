@@ -1,0 +1,39 @@
+<div class="container">
+
+</br>
+
+</br>
+
+
+
+
+<div class="container">
+	<h1>Welcome to Explorador</h1>
+</br>
+</br>
+  <div class="row">
+  	<% @plans.each do |plan| %>
+    <div class="col-sm-4">
+
+			 <div class="card-group">
+				  <div class="card">
+				    <img class="card-img-top" src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/france/paris/eiffel-tower-paris-p.jpg?imwidth=480" alt="Card image cap">
+				    <div class="card-body">
+				      <h5 class="card-title"><%= plan.country %>, <%= plan.city %></h5>
+				      <p class="card-text">
+				      	<p><%= plan.description %></p>
+
+				      	<p><%= plan.datetime%></p>
+
+				      	</p>
+				    </div>
+				    <div class="card-footer">
+				      <small class="text-muted"><%= link_to 'Show', plan_path(plan) %></small>
+				    </div>
+				  </div>
+				</div>
+
+		</div>
+		<% end %>
+	</div>
+</div>
