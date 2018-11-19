@@ -37,7 +37,7 @@ class PlansController < ApplicationController
 
 private
   def plan_params
-    params.require(:plan).permit(:title, :address, :description, :activties, :image_url, :latitude, :longitude, :user_id)
+    params.require(:plan).permit(:title, :address, :description, :activties, :image_url, :user_id)
   end
 
 
