@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+body {
+
+	font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+.banner {
+
+	background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eb87a25dcd5110b903616b765084274a&auto=format&fit=crop&w=2052&q=80");
+	 /* Set a specific height */
+    min-height: 450px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+h2 {
+
+	padding-left: 2%;
+	padding-top: 15%;
+	margin-left: 30px;
+	color:white;
+	font-size: 100px;
+	font-weight: bold;
+
+
+
+}
+
+.show-list {
+	display: inline-block;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	border-radius: 10px;
+	background: #fd746c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+.showplan-container {
+
+  width:100%;
+  height:100%;
+
+  // padding-:10px;
+
+}
+
+.showplan-container > div{
+  float:left;
+  margin-top:10px;
+
+}
+
+.plan-details {
+
+
+
+	width:100%;
+  height:220px;
+
+  margin-bottom: 40px;
+
+}
+
+.map-container {
+	margin-top: 10px;
+	float: left;
+	width:100%;
+  height:150px;
+
+}
+
+// .showplan-container {
+
+// 	display: inline-block;
+// }

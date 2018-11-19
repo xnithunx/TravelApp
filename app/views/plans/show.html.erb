@@ -1,80 +1,95 @@
-<div class="container">
+<div class="banner">
 
-<p>
-	  <strong><%= @plan.title %></strong>
-
-</p>
-
-	<p>
-	  <strong>Location</strong>
-	  <%= @plan.address %>
-	</p>
-
-	<p>
-	  <strong>Description</strong>
-	  <%= @plan.description %>
-	</p>
-
-	<p>
-	  <strong>Activities</strong>
-	  <%= @plan.activities %>
-	</p>
-
-	<p>
-	  <strong>Image</strong></br>
-	  <%= cl_image_tag(@plan.image_url, :width => 150, :height => 150) %>
-	</p>
-
-
-	<%= link_to 'Back', user_plans_path %> </br>
-
-	<%= link_to 'Index page', controller: 'plans' %>
-
-
-</br>
-</br>
-
-
-	<p>
-	  <strong>MAP</strong>
-	 <%= @plan.latitude %>, <%= @plan.longitude %>
-	</p>
-
-<style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 500px;
-        width: 100%;
-      }
-
-    </style>
-
- <div id="map"></div>
-    <script>
-      var map;
-
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat:<%= @plan.latitude %>, lng:<%= @plan.longitude %>},
-          zoom: 13
-        });
-
-        var marker = new google.maps.Marker({
-    position: {lat:<%= @plan.latitude %>, lng:<%= @plan.longitude %>},
-    map: map,
-    title: 'Hello World!'
-  });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS44YowqX6GSGqDQjm1q7gkLSEYuhEWtA&callback=initMap" async defer></script>
-
-  <div>
-	</br>
-	</br>
-  </div>
-
-
+	<h2><%= @plan.title %></h2>
 
 </div>
+
+<div class="container">
+<!--
+	<ul>
+		<li>One</li>
+		<li>Two</li>
+		<li>Three</li>
+		<li>Four</li>
+	<ul> -->
+
+<div class="showplan-container">
+
+		<div class="plan-details">
+
+
+
+
+
+
+
+				  <p class="show-list"><%= @plan.address %> </p>
+
+
+
+
+				  <p class="show-list"><%= @plan.description %> </p></br>
+
+
+
+
+				 <!--  <p><%= @plan.activities %></p> </br> -->
+
+
+
+
+				  <%= cl_image_tag(@plan.image_url, :width => 150, :height => 150) %></br>
+
+
+					<%= link_to 'Back', user_plans_path %> </br>
+					<%= link_to 'Index page', controller: 'plans' %>
+
+
+		</div>
+
+		<style>
+		      /* Always set the map height explicitly to define the size of the div
+		       * element that contains the map. */
+		      #map {
+		        height: 300px;
+		        width: 100%;
+		      }
+
+
+		    </style>
+		<div class="map-container">
+			 <div id="map"></div>
+			    <script>
+			      var map;
+
+
+			      function initMap() {
+			        map = new google.maps.Map(document.getElementById('map'), {
+			          center: {lat:<%= @plan.latitude %>, lng:<%= @plan.longitude %>},
+			          zoom: 13
+			        });
+
+			        var marker = new google.maps.Marker({
+			    position: {lat:<%= @plan.latitude %>, lng:<%= @plan.longitude %>},
+			    map: map,
+			    title: 'Hello World!'
+			  });
+			      }
+			    </script>
+			    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS44YowqX6GSGqDQjm1q7gkLSEYuhEWtA&callback=initMap" async defer></script>
+
+		</div>
+	</div>
+  <div>
+
+  </div>
+
+</br>
+	</br>
+	WTF
+
+
+ </div>
+
+
+
