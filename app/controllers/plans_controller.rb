@@ -1,4 +1,5 @@
 class PlansController < ApplicationController
+  before_action :authenticate_user!, :except => [ :show, :index ]
   def index
     @plans = Plan.all
   end
@@ -14,10 +15,18 @@ class PlansController < ApplicationController
   end
 
   def create
+
+    uploaded_file = params[:plan][:image_url].path
+    cloudinary_file = Cloudinary::Uploader.upload(uploaded_file)
+
+    params[:plan][:image_url] = cloudinary_file['public_id']
+
     @plan = Plan.new(plan_params)
 
+      @plan.user = current_user
+
   @plan.save
-  redirect_to @plan
+  redirect_to user_plan_path(user_id: current_user.id, id: @plan.id)
   end
 
   def update
@@ -28,7 +37,7 @@ class PlansController < ApplicationController
 
 private
   def plan_params
-    params.require(:plan).permit(:country, :city, :datetime, :description, :datetime)
+    params.require(:plan).permit(:title, :address, :description, :activties, :image_url, :latitude, :longitude, :user_id)
   end
 
 
