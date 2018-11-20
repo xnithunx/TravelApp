@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
 
     resources :users do
-      resources :plans
+      resources :plans do
+        resources :comments
+
+      end
 
 
 end

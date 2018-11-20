@@ -6,6 +6,7 @@ class PlansController < ApplicationController
 
   def show
     @plan = Plan.find(params[:id])
+     @comments = Comment.where(plan_id: params[:id])
   end
 
   def new

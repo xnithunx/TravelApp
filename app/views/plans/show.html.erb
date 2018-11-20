@@ -4,6 +4,7 @@
 
 	<div class="banner-show-text">
 			<h2><%= @plan.title %></h2>
+		  <p class="username-show">	<%= current_user.email %></p>
 			<button class="edit-show-button"><%= link_to 'EDIT', edit_user_plan_path, :style => 'color:white; font-weight:light' %></button>
 
 	</div>
@@ -55,6 +56,41 @@
 		<div class="map-container">
 			 <div id="map"></div>
 			 <div class="comments-block">
+
+			 	<%= form_with scope: :comment, url: user_plan_comments_path(user_id: current_user.id, plan_id: @plan.id), local: true do |form| %>
+
+			 	<p>
+			 		<%= form.label :user_comment, "Add Comment" %></br>
+			 		<%= form.text_area :user_comment , :class => "comment-fill-box" %>
+			 	</p>
+
+			 	<p>
+			 		<%= form.submit 'post comment' %>
+			 	</p>
+			<% end %>
+				<div class ="table-responsive-sm">
+					<table class="table table-sm">
+						<thead class="comment-table-headings">
+							<tr>
+								<th scope="col" class="username-heading">Username</th>
+								<th scope="col">Comment</th>
+								<th scope="col">Edit</th>
+								<th scope="col" class="delete-heading">Delete</th>
+							</tr>
+						</thead>
+						<tbody>
+						<% @comments.each do |comment| %>
+						<tr class="comment-entry">
+							<td><%= current_user.email %></td>
+							<td><%= comment.user_comment %></td>
+							<td><%= link_to '...', edit_user_plan_comment_path(user_id: current_user.id, plan_id: @plan.id, id: comment.id), :style => 'color:white; font-weight:bold'%></td>
+							<td><%= link_to 'X', user_plan_comment_path(user_id: current_user.id, plan_id: @plan.id, id: comment.id), method: :delete, data: { confirm: 'Are you sure?' }, :style => 'color:white; font-weight:bold'%></td>
+						</tr>
+						<% end %>
+						</tbody>
+					</table>
+				</div>
+				<div>
 
 				</div>
 

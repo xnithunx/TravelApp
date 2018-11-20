@@ -33,6 +33,10 @@ body {
 
 }
 
+.username-show{
+	font-size:20px;
+}
+
 .edit-show-button {
 
 background: #F7971E;  /* fallback for old browsers */
@@ -127,13 +131,80 @@ background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, F
 
 	height: 100px;
 	width: 100%;
-	background-color:black;
+
 	margin-top: 10px;
 
 
 }
 
-// .showplan-container {
+.comment-fill-box {
 
-// 	display: inline-block;
-// }
+	background: #F7971E;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border: none;
+	border-radius: 10px;
+	color:white;
+	font-size: 20px;
+}
+
+
+.comment-table-headings {
+	color: white;
+	border: none;
+	background: #F7971E;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border-radius: 10px;
+	text-align: center;
+
+}
+
+.username-heading{
+
+	border-bottom-left-radius: 05px;
+	border-top-left-radius: 05px;
+
+
+}
+
+.delete-heading{
+
+	border-bottom-right-radius: 05px;
+	border-top-right-radius: 05px;
+
+
+}
+
+.table-responsive-sm {
+	border: none;
+	font-size: 13px;
+}
+
+.table.table-sm {
+	border: none;
+}
+
+.comment-entry{
+
+color:white;
+background: #fd746c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+tbody{
+	background-color: white;
+	border: none;
+}
+
+
+
+
+
+
+
+
+
+
