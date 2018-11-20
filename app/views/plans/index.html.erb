@@ -10,9 +10,11 @@
 
 
 <div class="banner">
-	<p>The</p>
-	<p>Adventure</p>
-	<p>Begins</p>
+	<div class="banner-text">
+		<p>The</p>
+		<p>Adventure</p>
+		<p>Begins</p>
+	</div>
 </div>
 <div class="container">
 </br>
@@ -34,16 +36,26 @@
 
 			 <div class="card-group">
 				  <div class="card">
-				    <img class="card-img-top" src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/france/paris/eiffel-tower-paris-p.jpg?imwidth=480" alt="Card image cap" id="index-image">
+				    <img class="card-img-top" src="https://images.unsplash.com/photo-1529260830199-42c24126f198?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db2463844a4685d360f7ac77495c069a&auto=format&fit=crop&w=2110&q=80" alt="Card image cap" id="index-image">
 				    <div class="card-body">
-				      <h5 class="card-title"><%= plan.address %></h5>
-				      <p class="card-text">
-				      	<p><%= plan.description %></p>
+				    	<div class="index-place-details">
+						      <div class="card-title">
+						      	<img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png" alt="icon" id="place-icon"/>
+						      	<%= plan.address %>
 
-				      	</p>
+						      </div>
+							 	</div>
+
+					      <p class="card-text">
+
+					      	<p><%= plan.description %></p>
+
+					      </p>
+
 				    </div>
-				    <div class="card-footer">
-				      <small class="text-muted"><%= link_to 'Details', user_plan_path(user_id: current_user.id, id: plan.id) %></small>
+				  <div class="card-footer" id="index-card-footer">
+				   <%= link_to "EXPLORE", user_plan_path(user_id: current_user.id, id: plan.id), :style => 'color:white; font-weight:bold' %>
+
 				    </div>
 				  </div>
 				</div> </br>

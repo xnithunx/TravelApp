@@ -12,6 +12,7 @@ class PlansController < ApplicationController
   end
 
   def edit
+    @plan = Plan.find(params[:id])
   end
 
   def create
@@ -30,6 +31,17 @@ class PlansController < ApplicationController
   end
 
   def update
+    @plan = Plan.find(params[:id])
+
+    uploaded_file = params[:plan][:image_url].path
+    cloudinary_file = Cloudinary::Uploader.upload(uploaded_file)
+
+    params[:plan][:image_url] = cloudinary_file['public_id']
+
+    @plan.seller = current_user
+
+    @plan.update(plan_params)
+    redirect_to user_plan_path(user_id: current_user.id, id: @plan.id)
   end
 
   def destroy

@@ -6,6 +6,8 @@ body {
 
 }
 
+
+
 .banner {
 
 	background-image: url("https://images.unsplash.com/photo-1487581424120-18f3611a63e6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eb87a25dcd5110b903616b765084274a&auto=format&fit=crop&w=2052&q=80");
@@ -20,6 +22,42 @@ body {
 
 }
 
+.banner-show-text {
+
+	padding-top: 25%;
+	padding-bottom: 25%;
+	font-weight: bold;
+	font-size: 50px;
+	border: none;
+
+
+}
+
+.edit-show-button {
+
+background: #F7971E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-size: 20px;
+color:white;
+border-radius: 05px;
+border: none;
+width: 100px;
+}
+
+.edit-show-button:hover {
+
+background: #F7971E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+font-size: 20px;
+color:white;
+border-radius: 05px;
+border: none;
+width: 115px;
+
+}
 
 h2 {
 
@@ -81,6 +119,17 @@ background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, F
 	float: left;
 	width:100%;
   height:150px;
+
+
+}
+
+.comments-block{
+
+	height: 100px;
+	width: 100%;
+	background-color:black;
+	margin-top: 10px;
+
 
 }
 

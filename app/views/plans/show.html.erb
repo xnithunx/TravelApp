@@ -1,6 +1,15 @@
 <div class="banner">
 
-<h2><%= @plan.title %></h2>
+
+
+	<div class="banner-show-text">
+			<h2><%= @plan.title %></h2>
+			<button class="edit-show-button"><%= link_to 'EDIT', edit_user_plan_path, :style => 'color:white; font-weight:light' %></button>
+
+	</div>
+
+
+
 
 </div>
 
@@ -17,35 +26,21 @@
 
 		<div class="plan-details">
 
-
-
-
-
-
-
 				  <p class="show-list"><%= @plan.address %> </p>
-
-
-
 
 				  <p class="show-list"><%= @plan.description %> </p></br>
 
-
-
-
 				 <!--  <p><%= @plan.activities %></p> </br> -->
-
-
-
 
 				  <%= cl_image_tag(@plan.image_url, :width => 150, :height => 150) %></br>
 
 
-					<%= link_to 'Back', user_plans_path %> </br>
 					<%= link_to 'Index page', controller: 'plans' %>
 
 
 		</div>
+
+
 
 		<style>
 		      /* Always set the map height explicitly to define the size of the div
@@ -59,6 +54,11 @@
 		    </style>
 		<div class="map-container">
 			 <div id="map"></div>
+			 <div class="comments-block">
+
+				</div>
+
+
 			    <script>
 			      var map;
 
@@ -79,17 +79,12 @@
 			    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS44YowqX6GSGqDQjm1q7gkLSEYuhEWtA&callback=initMap" async defer></script>
 
 		</div>
+
 	</div>
-  <div>
-
-  </div>
-
-</br>
-	</br>
-	WTF
-
 
  </div>
+
+
 
 
 
