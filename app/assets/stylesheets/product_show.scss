@@ -92,6 +92,8 @@ background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, F
 
 
 
+
+
 .showplan-container {
 
   width:100%;
@@ -112,7 +114,7 @@ background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, F
 
 
 	width:100%;
-  height:220px;
+  height:25%;
 
   margin-bottom: 40px;
 
@@ -123,8 +125,6 @@ background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, F
 	float: left;
 	width:100%;
   height:150px;
-
-
 }
 
 .comments-block{
@@ -139,9 +139,16 @@ background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, F
 
 .comment-fill-box {
 
-	background: #F7971E;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	// background: #F7971E;  /* fallback for old browsers */
+	// background: -webkit-linear-gradient(to left, #FFD200, #F7971E);   Chrome 10-25, Safari 5.1-6
+	// background: linear-gradient(to left, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 	border: none;
 	border-radius: 10px;
 	color:white;
@@ -188,9 +195,10 @@ background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, F
 .comment-entry{
 
 color:white;
-background: #fd746c;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 }
 

@@ -5,6 +5,7 @@
 	<div class="banner-show-text">
 			<h2><%= @plan.title %></h2>
 		  <p class="username-show">	<%= current_user.email %></p>
+
 			<button class="edit-show-button"><%= link_to 'EDIT', edit_user_plan_path, :style => 'color:white; font-weight:light' %></button>
 
 	</div>
@@ -27,7 +28,7 @@
 
 		<div class="plan-details">
 
-				  <p class="show-list"><%= @plan.address %> </p>
+				  <p class="show-list" id="show-address"><%= @plan.address %> </p>
 
 				  <p class="show-list"><%= @plan.description %> </p></br>
 
