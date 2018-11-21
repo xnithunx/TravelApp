@@ -4,9 +4,10 @@
 
 	<div class="banner-show-text">
 			<h2><%= @plan.title %></h2>
-		  <p class="username-show">	<%= current_user.email %></p>
-
+		  <p class="username-show">	<%= link_to @plan.user.email, user_path(@plan.user_id), :style => 'color:white;' %></p>
+	<% if current_user.email == @plan.user.email %>
 			<button class="edit-show-button"><%= link_to 'EDIT', edit_user_plan_path, :style => 'color:white; font-weight:light' %></button>
+	<% end %>
 
 	</div>
 
@@ -36,8 +37,6 @@
 
 				  <%= cl_image_tag(@plan.image_url, :width => 150, :height => 150) %></br>
 
-
-					<%= link_to 'Index page', controller: 'plans' %>
 
 
 		</div>

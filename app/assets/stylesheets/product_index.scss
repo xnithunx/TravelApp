@@ -53,11 +53,40 @@ h1{
 	background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	text-align: center;
 	position: center;
-	padding: 20px;
+	padding: 15px;
 	border-radius: 10px;
 
 
 }
+
+.create-plan-button {
+
+	text-align: center;
+	margin-top: 20px;
+	background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius: 10px;
+padding: 10px;
+
+}
+
+.create-plan-button:hover {
+
+	text-align: center;
+	margin-top: 20px;
+
+	background: #FC466B;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+border-radius: 10px;
+padding: 10px;
+
+}
+
 
 #index-card-footer {
 	background-color: none;
