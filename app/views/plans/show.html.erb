@@ -3,16 +3,21 @@
 
 
 	<div class="banner-show-text">
-			<h2><%= @plan.title %></h2>
-		  <p class="username-show">	<%= link_to @plan.user.username, user_path(@plan.user_id), :style => 'color:white;' %></p>
+			<h2><%= @plan.title %></br>
+		 	<%= link_to @plan.user.username, user_path(@plan.user_id), :style => 'color:white; font-size:20px;' %></h2>
 	<% if current_user.email == @plan.user.email %>
 			<button class="edit-show-button"><%= link_to 'EDIT', edit_user_plan_path, :style => 'color:white; font-weight:light' %></button>
 	<% end %>
 
+	<div class="follow-button">
+	<% if current_user.favorited?(@plan) %>
+		<%= button_to "Unfavorite", {action:'unfavorite', id:@plan.id}, method: 'post', :class => "for-following-button"%>
+	<% elsif current_user.id != @plan %>
+		<%= button_to "Favorite", {action:'favorite', id:@plan.id}, method: 'post', :class => "for-follow-button" %>
+		<% end %>
+
+
 	</div>
-
-
-
 
 </div>
 

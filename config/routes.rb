@@ -10,13 +10,17 @@ Rails.application.routes.draw do
         get 'unfollow'
         post 'unfollow'
       end
+
       resources :plans do
+        collection do
+          get 'favorite'
+          post 'favorite'
+          get 'unfavorite'
+          post 'unfavorite'
+        end
         resources :comments
-
       end
-
-
-end
+  end
 
 root "plans#index"
 

@@ -15,12 +15,17 @@ class UsersController < ApplicationController
     @follow = Follow.find_by(follower: current_user, followable: @user)
     current_user.follow(@user)
 
-    # user.reload
+    redirect_to @user
+
   end
 
   def unfollow
     @user = User.find(params[:id])
     current_user.stop_following(@user)
+
+    redirect_to @user
   end
+
+
 
 end

@@ -48,6 +48,23 @@ class PlansController < ApplicationController
   def destroy
   end
 
+
+  def favorite
+    @plan = Plan.find(params[:id])
+    @favorite = Favorite.find_by(favoritor: current_user, favoritable: @plan)
+    current_user.favorite(@plan)
+
+    redirect_to user_plan_path(user_id: current_user.id, id: @plan.id)
+  end
+
+
+  def unfavorite
+    @plan = Plan.find(params[:id])
+    current_user.remove_favorite(@plan)
+
+    redirect_to user_plan_path(user_id: current_user.id, id: @plan.id)
+  end
+
 private
   def plan_params
     params.require(:plan).permit(:title, :address, :description, :activties, :image_url, :user_id)
