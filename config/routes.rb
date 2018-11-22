@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
 
     resources :users do
+      collection do
+        get 'follow'
+        post 'follow'
+      end
       resources :plans do
         resources :comments
 

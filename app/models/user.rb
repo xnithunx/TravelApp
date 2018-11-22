@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :plans
   has_many :comments
 
+  acts_as_followable
+  acts_as_follower
+
 end
