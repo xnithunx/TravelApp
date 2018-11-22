@@ -1,10 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
 
+
+.show-user-banner {
+
+	background-image: url("https://images.unsplash.com/photo-1516737976105-136883458db7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bbb464f390fbbf695762c0ef0f3c0d4b&auto=format&fit=crop&w=2764&q=80");
+	 /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.show-user-banner-text {
+
+	// padding-top: 45vw;
+	// // padding-bottom: 2vw;
+
+}
+
+
 .user-show-username {
 	text-align: center;
 	font-weight: bold;
-	font-size: 20px;
-	color: teal;
+	font-size: 35px;
+	color: white;
+	padding-top: 30vw;
+
 
 }
 

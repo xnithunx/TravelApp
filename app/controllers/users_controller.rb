@@ -14,6 +14,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @follow = Follow.find_by(follower: current_user, followable: @user)
     current_user.follow(@user)
+
+    # user.reload
   end
 
   def unfollow
