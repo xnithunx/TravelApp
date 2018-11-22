@@ -7,6 +7,8 @@ Rails.application.routes.draw do
       collection do
         get 'follow'
         post 'follow'
+        get 'unfollow'
+        post 'unfollow'
       end
       resources :plans do
         resources :comments

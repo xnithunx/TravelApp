@@ -16,9 +16,9 @@ class UsersController < ApplicationController
     current_user.follow(@user)
   end
 
-  # def unfollow
-  #   @user = User.find(params[:id])
-  #   current.user.stop_following(@user)
-  # end
+  def unfollow
+    @user = User.find(params[:id])
+    current_user.stop_following(@user)
+  end
 
 end
