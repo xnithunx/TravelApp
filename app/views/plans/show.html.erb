@@ -4,10 +4,13 @@
 
 	<div class="banner-show-text">
 			<h2><%= @plan.title %></br>
-		 	<%= link_to @plan.user.username, user_path(@plan.user_id), :style => 'color:white; font-size:20px;' %></h2>
+
+		 	<%= link_to @plan.user.username, user_path(@plan.user_id), :id => "show-user-banner-phrase-name"  %></h2>
+		 	<div id="for-edit">
 	<% if current_user.email == @plan.user.email %>
 			<button class="edit-show-button"><%= link_to 'EDIT', edit_user_plan_path, :style => 'color:white; font-weight:light' %></button>
 	<% end %>
+</div>
 
 	<div class="follow-button">
 	<% if current_user.favorited?(@plan) %>
@@ -86,7 +89,7 @@
 						<tbody>
 						<% @comments.each do |comment| %>
 						<tr class="comment-entry">
-							<td><%= current_user.email %></td>
+							<td><%= current_user.username %></td>
 							<td><%= comment.user_comment %></td>
 							<td><%= link_to '...', edit_user_plan_comment_path(user_id: current_user.id, plan_id: @plan.id, id: comment.id), :style => 'color:white; font-weight:bold'%></td>
 							<td><%= link_to 'X', user_plan_comment_path(user_id: current_user.id, plan_id: @plan.id, id: comment.id), method: :delete, data: { confirm: 'Are you sure?' }, :style => 'color:white; font-weight:bold'%></td>
