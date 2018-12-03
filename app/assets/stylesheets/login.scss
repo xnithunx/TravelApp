@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+
+#login-text {
+	font-size: 30px;
+	text-align: center;
+	margin-top: 30px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+.loginbox-container {
+
+
+	height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+  font-family: 'Noto Sans JP', sans-serif;
+  color:white;
+  font-weight: bold;
+
+}
+
+
+.actions{
+	margin-top: 20px;
+	color:white;
+	font-weight: bold;
+}
+
+.loginbox {
+
+
+	background: #F7971E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+  width: 750px;
+  height: 50%;
+  border-radius: 20px;
+}
+
+.new_user {
+
+height: 300px;
+text-align: center;
+// background-color: pink;
+
+}
+
+
+.checkbox {
+	background: #3494E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+#user_password {
+	color:white;
+	text-align: center;
+	border-radius: 20px;
+	border-style: none;
+	background: #00B4DB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#user_email {
+	color:white;
+	text-align: center;
+	border-radius: 20px;
+	border-style: none;
+
+	background: #00B4DB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+#user_username {
+	color: white;
+	text-align: center;
+	border-radius: 20px;
+	border-style: none;
+	background: #00B4DB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
