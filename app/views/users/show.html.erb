@@ -5,10 +5,13 @@
 		<!-- <div class="user-show-username"> -->
 	<p id="show-user-banner-phrase"> Explorador adventures by </br>
 	<button id="show-user-banner-phrase-name"><%= @user.username %></button></p>
+
 <!-- </div> -->
 
 
 		<div class="follow-button">
+			<p class="for-followers-count"><%= @user.followers_count %><br>
+				  <%= image_tag("follower_white.png", :id => "like-icon",:alt => "likes", :style => 'height:30px; width:30px;') %></p>
 
 			<% if current_user.following?(@user) %>
 				<%= button_to "Following", {action:'unfollow', id:@user.id}, method: 'post', :class => "for-following-button"%>

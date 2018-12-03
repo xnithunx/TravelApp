@@ -57,6 +57,7 @@
 						      	<%= plan.address %>
 
 
+
 						      </div>
 							 	</div>
 
@@ -89,13 +90,16 @@
 				    	<div class="index-place-details">
 						      <div class="card-title">
 						      	<img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png" alt="icon" id="place-icon"/>
-						      	<%= plan.address %>
+						      	<%= plan.address %></br></br>
+						      	<%= image_tag("like_icon.png", :id => "like-icon",:alt => "likes", :style => 'height:25px; width:25px') %> <%= plan.favoritors_count%>
+
 
 
 						      </div>
 							 	</div>
 
 					      <p class="card-text">
+
 
 					      	<p><%= plan.description %></p>
 

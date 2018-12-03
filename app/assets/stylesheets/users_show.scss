@@ -77,6 +77,50 @@ background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, F
 }
 
 
+.for-favorites-count {
+	font-size: 20px;
+color:white;
+border-radius: 05px;
+border: none;
+width: 110px;
+text-align: center;
+
+background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.for-followers-count {
+	font-size: 18px;
+	font-weight: bold;
+color:white;
+border-radius: 05px;
+border: none;
+width: 110px;
+text-align: center;
+
+background: #cc2b5e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+
+#like-icon {
+
+	padding-bottom: 03px;
+}
+
+ .likes-circle {
+      width: 100px;
+      height: 100px;
+      background: red;
+      border-radius: 50%
+    }
+
 
 .for-following-button {
 	font-size: 20px;
