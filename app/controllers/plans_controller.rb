@@ -54,6 +54,7 @@ class PlansController < ApplicationController
     @favorite = Favorite.find_by(favoritor: current_user, favoritable: @plan)
     current_user.favorite(@plan)
 
+
     redirect_to user_plan_path(user_id: current_user.id, id: @plan.id)
   end
 
